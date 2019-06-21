@@ -9,7 +9,7 @@ Basic Docker setup to enable a quick start for a LAMP Stack based on CentOS 7 wi
 - [x] MariaDB proper volume mount
 - [x] Segregation of data/logs folders
 - [x] Projeqtor v. 8.0.4
-  [x] 
+ 
  
 ## How to run
 
@@ -27,7 +27,7 @@ docker-compose up -d
   * Apache to port 80
   * MariaDB to port 3306/8889
 
-## Hosts within your environment
+## Hosts/containers within your environment
 
 You'll need to configure your application to use any services you enabled:
 
@@ -55,6 +55,9 @@ You'll need to configure your application to use any services you enabled:
   * Run composer outside of the php container, as doing so would install all your dependencies owned by `root` within your vendor folder.
   * Run commands (ie Symfony's console) straight inside of your container. You can easily open a shell as described above and do your thing from there.
   * Proper initialization procedures should be followed on MariaDB initialization and deployment.
+  * ProjeqtOr codebase has to be downloaded from proper website downloading first version 8.0.0 and then version 8.0.4
+  * SQL dump is the dump of version 8.0.4
+  * ProjeqtOr administrator profile has login/password set on admin/admin (please change it once you deploy it)
 
 ## License
 [MIT](/LICENSE)
