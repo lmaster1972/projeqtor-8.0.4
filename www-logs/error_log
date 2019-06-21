@@ -1,0 +1,80 @@
+[Thu Jun 13 10:00:50.447065 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 13 10:00:50.462785 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Thu Jun 13 10:00:50.463308 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Jun 13 10:00:51.966302 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Thu Jun 13 10:00:51.966341 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Jun 13 11:38:49.235010 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Thu Jun 13 11:38:49.279338 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Thu Jun 13 11:38:49.279905 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Thu Jun 13 11:38:50.730014 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Thu Jun 13 11:38:50.730131 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Thu Jun 13 14:29:10.612312 2019] [core:warn] [pid 1] AH00045: child process 6 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612502 2019] [core:warn] [pid 1] AH00045: child process 7 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612531 2019] [core:warn] [pid 1] AH00045: child process 8 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612554 2019] [core:warn] [pid 1] AH00045: child process 9 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612577 2019] [core:warn] [pid 1] AH00045: child process 10 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612601 2019] [core:warn] [pid 1] AH00045: child process 11 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612624 2019] [core:warn] [pid 1] AH00045: child process 12 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612647 2019] [core:warn] [pid 1] AH00045: child process 13 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612670 2019] [core:warn] [pid 1] AH00045: child process 14 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:10.612693 2019] [core:warn] [pid 1] AH00045: child process 15 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614870 2019] [core:warn] [pid 1] AH00045: child process 6 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614903 2019] [core:warn] [pid 1] AH00045: child process 7 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614916 2019] [core:warn] [pid 1] AH00045: child process 8 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614929 2019] [core:warn] [pid 1] AH00045: child process 9 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614941 2019] [core:warn] [pid 1] AH00045: child process 10 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614953 2019] [core:warn] [pid 1] AH00045: child process 11 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614965 2019] [core:warn] [pid 1] AH00045: child process 12 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614977 2019] [core:warn] [pid 1] AH00045: child process 13 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.614989 2019] [core:warn] [pid 1] AH00045: child process 14 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:12.615001 2019] [core:warn] [pid 1] AH00045: child process 15 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616750 2019] [core:warn] [pid 1] AH00045: child process 6 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616817 2019] [core:warn] [pid 1] AH00045: child process 7 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616865 2019] [core:warn] [pid 1] AH00045: child process 8 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616899 2019] [core:warn] [pid 1] AH00045: child process 9 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616931 2019] [core:warn] [pid 1] AH00045: child process 10 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616961 2019] [core:warn] [pid 1] AH00045: child process 11 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.616993 2019] [core:warn] [pid 1] AH00045: child process 12 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.617022 2019] [core:warn] [pid 1] AH00045: child process 13 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.617052 2019] [core:warn] [pid 1] AH00045: child process 14 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:14.617080 2019] [core:warn] [pid 1] AH00045: child process 15 still did not exit, sending a SIGTERM
+[Thu Jun 13 14:29:16.665828 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Fri Jun 14 06:21:50.028177 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.2. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 14 06:21:50.913487 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Fri Jun 14 06:21:50.914265 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Fri Jun 14 06:22:06.325223 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Fri Jun 14 06:22:06.325279 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Jun 14 08:52:20.392136 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 14 08:52:20.492580 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Fri Jun 14 08:52:20.493738 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Fri Jun 14 08:52:24.166009 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Fri Jun 14 08:52:24.166046 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Jun 14 08:55:39.458384 2019] [php7:warn] [pid 8] [client 172.22.0.1:45452] PHP Warning:  mysqli_connect(): (HY000/1045): Access denied for user 'projeqtor'@'centos7.project-projqt_default' (using password: YES) in /var/www/html/test/test-conn.php on line 2
+[Fri Jun 14 09:35:00.816501 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 14 09:35:00.849235 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Fri Jun 14 09:35:00.849777 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Fri Jun 14 09:35:11.550330 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Fri Jun 14 09:35:11.550376 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Jun 14 10:06:36.600167 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 14 10:06:36.630833 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Fri Jun 14 10:06:36.631374 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Fri Jun 14 10:06:58.648236 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Fri Jun 14 10:06:58.648276 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Jun 14 12:56:24.699081 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 172.22.0.3. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 14 12:56:24.776049 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Fri Jun 14 12:56:24.776873 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Fri Jun 14 12:56:27.800977 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Fri Jun 14 12:56:27.801048 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
+[Fri Jun 21 11:44:32.801590 2019] [suexec:notice] [pid 1] AH01232: suEXEC mechanism enabled (wrapper: /usr/sbin/suexec)
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 175.22.0.2. Set the 'ServerName' directive globally to suppress this message
+[Fri Jun 21 11:44:32.878569 2019] [auth_digest:notice] [pid 1] AH01757: generating secret for digest authentication ...
+[Fri Jun 21 11:44:32.879457 2019] [lbmethod_heartbeat:notice] [pid 1] AH02282: No slotmem from mod_heartmonitor
+[Fri Jun 21 11:44:36.263517 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.6 (CentOS) PHP/7.2.19 configured -- resuming normal operations
+[Fri Jun 21 11:44:36.263552 2019] [core:notice] [pid 1] AH00094: Command line: '/usr/sbin/httpd -D FOREGROUND'
