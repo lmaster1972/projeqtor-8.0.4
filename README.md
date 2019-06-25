@@ -20,11 +20,11 @@ docker-compose up -d
 
 | Service | Port | Notes |
 | --- | --- | --- |
-| Apache | 80 | --- |
+| Apache | 8080 | --- |
 | MySQL | --- | internally available |
 | rclone | --- | performing cloud backups |
 
-  * Apache to port 80
+  * Apache to port 8080
   * MariaDB to port 3306/8889
 
 ## Hosts/containers within your environment
@@ -33,7 +33,7 @@ You'll need to configure your application to use any services you enabled:
 
 | Service | Port | Notes |
 | --- | --- | --- |
-| www | 80 | --- |
+| www | 8080 | --- |
 | db | 3306/8889 | --- |
 | backup | --- | reads contents and pushes backups |
 
