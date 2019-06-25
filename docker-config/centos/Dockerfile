@@ -39,9 +39,6 @@ RUN wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm; \
 	php72-php-imap \
         libaio && \
     sed -i 's/;error_log = syslog/error_log = \/var\/www\/log\/httpd\/php.error.log/' /etc/opt/remi/php72/php.ini && \
-    #sed -i 's/;error_log = syslog/error_log = \/var\/log\/httpd\/php.error.log' /etc/opt/remi/php72/php.ini && \
-    #ln -sf /dev/stdout /var/log/httpd/access_log && \
-    #ln -sf /dev/stderr /var/log/httpd/error_log && \
     ln -sf /usr/bin/php72-pear /usr/bin/pear && \
     ln -sf /opt/remi/php72/root/usr/share/php /usr/share/php && \
     chmod -R g+w /opt/remi/php72/root/usr/share/php && \
@@ -55,6 +52,27 @@ RUN wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm; \
 RUN sed -i 's/; max_input_vars = 1000/max_input_vars = 4000/' /etc/opt/remi/php72/php.ini
 # needed  by Projqtor... LM
 
+# -----------------------------------------------------------------------------
+# Projeqtor download e copy under www-root
+# -----------------------------------------------------------------------------
+RUN cd /tmp  && \
+    mkdir proj && \
+    cd proj && \
+    wget https://sourceforge.net/projects/projectorria/files/projeqtorV8.0.0.zip/download && \
+    mv download projeqtorV8.0.0.zip && \
+    unzip projeqtorV8.0.0.zip && \
+    wget https://sourceforge.net/projects/projectorria/files/projeqtorV8.0.4.zip/download && \
+    mv download projeqtorV8.0.4.zip && \
+    unzip projeqtorV8.0.4.zip && \
+    rm -f *.zip && \
+    rm -f /tmp/proj/files/config/* && \
+    rm -f /tmp/proj/files/logs/* && \
+    rmdir /tmp/proj/files/config && \
+    rmdir /tmp/proj/files/logs && \
+    mv -R * /var/www/html && \
+    cd /var/www/html && \
+    chown -R apache:apache * 
+    
 # -----------------------------------------------------------------------------
 # Set ports and env variable HOME
 # -----------------------------------------------------------------------------
