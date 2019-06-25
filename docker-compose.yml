@@ -1,6 +1,6 @@
 # lampstack based on CentOS 7 equipped with MariaDB image detached
 #
-version: '2.2'
+version: '2.3'
 services:
    db:
         image: mariadb:latest
@@ -16,7 +16,7 @@ services:
          - MARIADB_USER=projeqtor
          - MARIA_PASSWORD=db_projeqtor_password
         networks:
-         - projeqtor_back
+         - projeqtor
         restart: always
 
    www:
@@ -29,8 +29,7 @@ services:
          - ./projector-logs:/var/www/html/files/logs
          - ./www-logs:/var/log/httpd
         networks:
-         - projeqtor_front
-         - projeqtor_back
+         - projeqtor
         ports:
          - "8080:8080"
         restart: always
@@ -51,13 +50,13 @@ services:
          - ./www-logs:/mnt/www-logs
         restart: always
         networks:
-         - projeqtor_back
+         - projeqtor
         depends_on:
          - db
          - www
 
 networks:
-    projeqtor_front:
+    projeqtor:
         # use the bridge driver, but disable IPv6
         driver: bridge
         internal: false
@@ -68,15 +67,4 @@ networks:
           config:
             - subnet: 175.22.0.0/24
               gateway: 175.22.0.1
-    projeqtor_back:
-        # use a custom driver, with no options
-        driver: macvlan
-        internal: true
-        driver_opts:
-          com.docker.network.enable_ipv6: "false"
-          encrypted: "true"
-        ipam:
-          driver: default
-          config:
-            - subnet: 172.22.0.0/24
-              gateway: 172.22.0.1
+
