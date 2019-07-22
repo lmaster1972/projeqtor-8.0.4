@@ -1,4 +1,4 @@
-# CentOS 7 Apache 2.4, PHP 7.2, Projeqtor 8.0.4, rclone Docker image setup
+# CentOS 7 Apache 2.4, PHP 7.2, Projeqtor 8.1.2, rclone Docker image setup
 
 Basic Docker setup to enable a quick start for a LAMP Stack based on CentOS 7 with MariaDB
 
@@ -8,7 +8,7 @@ Basic Docker setup to enable a quick start for a LAMP Stack based on CentOS 7 wi
 - [x] Expose service
 - [x] MariaDB proper volume mount
 - [x] Segregation of data/logs folders
-- [x] Projeqtor v. 8.0.4
+- [x] Projeqtor v. 8.1.2
  
  
 ## How to run
