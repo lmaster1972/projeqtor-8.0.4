@@ -58,17 +58,16 @@ RUN sed -i 's/; max_input_vars = 1000/max_input_vars = 4000/' /etc/opt/remi/php7
 RUN cd /tmp  && \
     mkdir proj && \
     cd proj && \
-    wget https://sourceforge.net/projects/projectorria/files/projeqtorV8.0.0.zip/download && \
-    mv download projeqtorV8.0.0.zip && \
+    wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.0.0.zip && \
     unzip projeqtorV8.0.0.zip && \
-    wget https://sourceforge.net/projects/projectorria/files/projeqtorV8.0.4.zip/download && \
-    mv download projeqtorV8.0.4.zip && \
-    unzip projeqtorV8.0.4.zip && \
+    wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.0.4.zip && \
+    unzip -f -o projeqtorV8.0.4.zip && \
     rm -f *.zip && \
-    rm -f /tmp/proj/files/config/* && \
-    rm -f /tmp/proj/files/logs/* && \
-    rmdir /tmp/proj/files/config && \
-    rmdir /tmp/proj/files/logs && \
+    cd projeqtor
+    rm -f /tmp/proj/projeqtor/files/config/* && \
+    rm -f /tmp/proj/projeqtor/files/logs/* && \
+    rmdir /tmp/proj/projeqtor/files/config && \
+    rmdir /tmp/proj/projeqtor/files/logs && \
     mv -R * /var/www/html && \
     cd /var/www/html && \
     chown -R apache:apache * 
