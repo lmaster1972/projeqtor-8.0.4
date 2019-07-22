@@ -15,7 +15,7 @@ RUN yum -y update && \
         unzip
 
 # -----------------------------------------------------------------------------
-# Apache 2.4 + (PHP 7.2 from Remi)
+# Apache 2.4 + PHP 7.2 from Remi
 # -----------------------------------------------------------------------------
 RUN wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm; \
     yum -y localinstall remi-release-7.rpm && \
@@ -38,7 +38,9 @@ RUN wget https://rpms.remirepo.net/enterprise/remi-release-7.rpm; \
 	php72-php-pecl-zip \
 	php72-php-imap \
         libaio && \
-    sed -i 's/;error_log = syslog/error_log = \/var\/www\/log\/httpd\/php.error.log/' /etc/opt/remi/php72/php.ini && \
+    sed -i 's/;error_log = syslog/error_log = \/var\/log\/httpd\/php.error.log/' /etc/opt/remi/php72/php.ini && \
+    touch /var/log/httpd/php.error.log && \
+    chown apache:apache /var/log/httpd/php.error.log && \
     ln -sf /usr/bin/php72-pear /usr/bin/pear && \
     ln -sf /opt/remi/php72/root/usr/share/php /usr/share/php && \
     chmod -R g+w /opt/remi/php72/root/usr/share/php && \
@@ -61,7 +63,11 @@ RUN cd /tmp  && \
     wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.0.0.zip && \
     unzip projeqtorV8.0.0.zip && \
     wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.0.4.zip && \
-    unzip -f -o projeqtorV8.0.4.zip && \
+    unzip -fo projeqtorV8.0.4.zip && \
+    wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.1.0.zip && \
+    unzip -fo projeqtorV8.1.0.zip && \
+    wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.1.2.zip && \
+    unzip -f -o projeqtorV8.1.2.zip && \
     rm -f *.zip && \
     cd projeqtor
     rm -f /tmp/proj/projeqtor/files/config/* && \
@@ -70,7 +76,8 @@ RUN cd /tmp  && \
     rmdir /tmp/proj/projeqtor/files/logs && \
     mv -R * /var/www/html && \
     cd /var/www/html && \
-    chown -R apache:apache * 
+    chown -R apache:apache *
+    chmod g+w /var/www/html/files/logs/
     
 # -----------------------------------------------------------------------------
 # Set ports and env variable HOME
