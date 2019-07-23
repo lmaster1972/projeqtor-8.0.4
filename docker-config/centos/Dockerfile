@@ -69,15 +69,19 @@ RUN cd /tmp  && \
     wget https://datapacket.dl.sourceforge.net/project/projectorria/projeqtorV8.1.2.zip && \
     unzip -f -o projeqtorV8.1.2.zip && \
     rm -f *.zip && \
-    cd projeqtor
+    cd projeqtor && \
     rm -f /tmp/proj/projeqtor/files/config/* && \
     rm -f /tmp/proj/projeqtor/files/logs/* && \
     rmdir /tmp/proj/projeqtor/files/config && \
     rmdir /tmp/proj/projeqtor/files/logs && \
     mv -R * /var/www/html && \
     cd /var/www/html && \
-    chown -R apache:apache *
-    chmod g+w /var/www/html/files/logs/
+    chown -R apache:apache * && \
+    chmod g+w /var/www/html/files/logs/ && \
+    crontab -l > /tmp/file.txt && \
+    echo '50 23 * * * /usr/local/sbin/update.sh > /dev/null' >> /tmp/file.txt && \
+    crontab /tmp/file.txt && \
+    rm -f /tmp/file.txt
     
 # -----------------------------------------------------------------------------
 # Set ports and env variable HOME
