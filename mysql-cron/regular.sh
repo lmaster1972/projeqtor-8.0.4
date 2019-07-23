@@ -12,7 +12,7 @@ find /tmp2/ -type f -name 'data-*.sql.gz' -mtime +6 -exec rm {} \;
 mysqlcheck -r -u root -p db-root-password -B projeqtr -f --flush
 # backup filename is built as data-YYYYMMDD.sql.gz
 DATE=$(date '+%Y%m%d')
-mysqldump -u root --password db_root_password --no-create-db --skip-comments projeqtr | gzip -9 > data-$DATE.sql.gz
+mysqldump -u root --password db_root_password --no-create-db --skip-comments projeqtr | gzip -9 > /tmp2/data-$DATE.sql.gz
 # after dump it proceeds with optimization
 mysqlcheck -o -u root -p db-root-password -B projeqtr --flush
 
