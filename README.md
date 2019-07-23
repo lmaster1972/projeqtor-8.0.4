@@ -55,7 +55,7 @@ You'll need to configure your application to use any services you enabled:
 ## Recommendations
 
   * Run composer outside of the php container, as doing so would install all your dependencies owned by `root` within your vendor folder.
-  * Run commands (ie Symfony's console) straight inside of your container. You can easily open a shell as described above and do your thing from there.
+  * Run commands (ie Bash/MySQL console) straight inside of your container. You can easily open a shell as described above and do your thing from there.
   * Proper initialization procedures should be followed on MariaDB initialization and deployment.
   * ProjeqtOr codebase has to be downloaded from proper website downloading first version 8.0.0 and then version 8.0.4 and then from version 8.1.0 up to 8.1.2
   * SQL dump is the dump of version 8.1.2
