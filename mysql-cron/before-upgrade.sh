@@ -4,7 +4,10 @@
 #        : https://www.mrwebmaster.it/mysql/fare-backup-database-mysql-mysqldump_6805.html
 #        : http://www.ducea.com/2007/07/25/dumping-mysql-stored-procedures-functions-and-triggers/
 #        : https://linuxhint.com/30_bash_script_examples/
+#        : https://mariadb.com/kb/it/mysqlcheck/
 # it removes earlier file in case it exists
 rm -f /tmp2/structure.sql.gz
+# it repairs before proceeding
+mysqlcheck -r -u root -p db-root-password -B projeqtr -f --flush
 # then it performs the dump
 mysqldump -u root --password db_root_password --routines --no-data --skip-opt --add-drop-database projeqtr | gzip -9 > /tmp2/structure.sql.gz 
