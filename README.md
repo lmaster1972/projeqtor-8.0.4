@@ -9,6 +9,8 @@ Basic Docker setup to enable a quick start for a LAMP Stack based on CentOS 7 wi
 - [x] MariaDB proper volume mount
 - [x] Segregation of data/logs folders
 - [x] Projeqtor v. 8.1.2
+- [x] Container system security patching on a daily basis
+- [ ] Regular backup policy (in progress)
  
  
 ## How to run
@@ -55,9 +57,11 @@ You'll need to configure your application to use any services you enabled:
   * Run composer outside of the php container, as doing so would install all your dependencies owned by `root` within your vendor folder.
   * Run commands (ie Symfony's console) straight inside of your container. You can easily open a shell as described above and do your thing from there.
   * Proper initialization procedures should be followed on MariaDB initialization and deployment.
-  * ProjeqtOr codebase has to be downloaded from proper website downloading first version 8.0.0 and then version 8.0.4
-  * SQL dump is the dump of version 8.0.4
+  * ProjeqtOr codebase has to be downloaded from proper website downloading first version 8.0.0 and then version 8.0.4 and then from version 8.1.0 up to 8.1.2
+  * SQL dump is the dump of version 8.1.2
   * ProjeqtOr administrator profile has login/password set on admin/admin (please change it once you deploy it)
+  * Cron jobs are meant not to interfere with regular users actitivities (around 23:50 daily) and are intended to dump and compress only data stored.
+  * Database maintenance procedure is kept right after backup procedure and flush procedure does not impact speed and performance of the solution.
 
 ## License
 [MIT](/LICENSE)
