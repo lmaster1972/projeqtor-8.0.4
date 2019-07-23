@@ -10,6 +10,7 @@ services:
          - ./mysql-dump:/tmp2
          - ./docker-config/mariadb/script:/docker-entrypoint-initdb.d
          - ./docker-config/mariadb/config:/etc/mysql/conf.d
+         - ./mysql-cron:/usr/local/sbin
         environment:
          - MARIADB_ROOT_PASSWORD=db_root_password
          - MARIADB_DB=projeqtr
@@ -28,6 +29,7 @@ services:
          - ./projeqtor-config:/var/www/html/files/config
          - ./projector-logs:/var/www/html/files/logs
          - ./www-logs:/var/log/httpd
+         - ./www-cron:/usr/local/sbin
         networks:
          - projeqtor
         ports:
@@ -48,6 +50,7 @@ services:
          - ./projeqtor-logs:/mnt/projeqtor-logs
          - ./www:/mnt/www
          - ./www-logs:/mnt/www-logs
+         - ./rclone-cron:/usr/local/sbin
         restart: always
         networks:
          - projeqtor
